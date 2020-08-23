@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: data_structure/fenwick_tree.cpp
+# :heavy_check_mark: data_structure/fenwick_tree.cpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -38,7 +38,7 @@ layout: default
 
 ## Verified with
 
-* :x: <a href="../../verify/inversion.test.cpp.html">inversion.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/inversion.test.cpp.html">inversion.test.cpp</a>
 
 
 ## Code

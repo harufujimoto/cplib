@@ -38,7 +38,15 @@ layout: default
 
 ### data_structure
 
+* :warning: <a href="library/data_structure/RangeMinQuery.cpp.html">data_structure/RangeMinQuery.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/fenwick_tree.cpp.html">data_structure/fenwick_tree.cpp</a>
+
+
+<div id="478f3a4c51824ad23cb50c1c60670c0f"></div>
+
+### task
+
+* :warning: <a href="library/task/AOJ_DSL_2_A.cpp.html">task/AOJ_DSL_2_A.cpp</a>
 
 
 ## Verify Files

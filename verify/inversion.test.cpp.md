@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: inversion.test.cpp
+# :x: inversion.test.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/inversion.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-23 13:41:30+09:00
+    - Last commit date: 2020-08-23 13:47:09+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_5_D">https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_5_D</a>
@@ -39,7 +39,7 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../library/data_structure/fenwick_tree.cpp.html">data_structure/fenwick_tree.cpp</a>
+* :x: <a href="../library/data_structure/fenwick_tree.cpp.html">data_structure/fenwick_tree.cpp</a>
 
 
 ## Code
@@ -81,7 +81,7 @@ int main(int argc, char const *argv[])
 	for (int i = 0; i < n; i++)cin >> a[i];
 	a = compress(a);
 	assert(*max_element(a.begin(),a.end()) <= 200020);
-	cout << inversion(a, 200020) << '\n';
+	cout << inversion(a, 200020) - 1<< '\n';
 	return 0;
 }
 
@@ -155,7 +155,7 @@ int main(int argc, char const *argv[])
 	for (int i = 0; i < n; i++)cin >> a[i];
 	a = compress(a);
 	assert(*max_element(a.begin(),a.end()) <= 200020);
-	cout << inversion(a, 200020) << '\n';
+	cout << inversion(a, 200020) - 1<< '\n';
 	return 0;
 }
 

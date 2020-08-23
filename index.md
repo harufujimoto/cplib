@@ -38,12 +38,12 @@ layout: default
 
 ### data_structure
 
-* :heavy_check_mark: <a href="library/data_structure/fenwick_tree.cpp.html">data_structure/fenwick_tree.cpp</a>
+* :x: <a href="library/data_structure/fenwick_tree.cpp.html">data_structure/fenwick_tree.cpp</a>
 
 
 ## Verify Files
 
 * :heavy_check_mark: <a href="verify/example.test.cpp.html">example.test.cpp</a>
-* :heavy_check_mark: <a href="verify/inversion.test.cpp.html">inversion.test.cpp</a>
+* :x: <a href="verify/inversion.test.cpp.html">inversion.test.cpp</a>
 
 

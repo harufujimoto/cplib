@@ -1,3 +1,6 @@
+/*
+	author : Haruki Fujimoto
+ */
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_5_D"
 #define GLIBCXX_DEBUG
 #include<bits/stdc++.h>

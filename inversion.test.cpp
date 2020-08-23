@@ -32,7 +32,7 @@ int main(int argc, char const *argv[])
 	for (int i = 0; i < n; i++)cin >> a[i];
 	a = compress(a);
 	assert(*max_element(a.begin(),a.end()) <= 200020);
-	cout << inversion(a, 200020) << '\n';
+	cout << inversion(a, 200020) - 1<< '\n';
 	return 0;
 }
 

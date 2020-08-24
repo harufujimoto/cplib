@@ -39,8 +39,9 @@ layout: default
 ### .
 
 * :warning: <a href="library/GRL_1_A.cpp.html">GRL_1_A.cpp</a>
+* :warning: <a href="library/ITP_1_1_B.cpp.html">ITP_1_1_B.cpp</a>
 * :warning: <a href="library/macro.cpp.html">macro.cpp</a>
-* :warning: <a href="library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="library/template.cpp.html">template.cpp</a>
 
 
 <div id="c8f6850ec2ec3fb32f203c1f4e3c2fd2"></div>
@@ -55,8 +56,8 @@ layout: default
 
 ### graph
 
-* :warning: <a href="library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
-* :warning: <a href="library/graph/template.cpp.html">graph/template.cpp</a>
+* :x: <a href="library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
+* :x: <a href="library/graph/template.cpp.html">graph/template.cpp</a>
 
 
 <div id="478f3a4c51824ad23cb50c1c60670c0f"></div>
@@ -70,12 +71,14 @@ layout: default
 
 ### task/AOJ
 
-* :warning: <a href="library/task/AOJ/GRL_1_A.cpp.html">task/AOJ/GRL_1_A.cpp</a>
+* :warning: <a href="library/task/AOJ/out.cpp.html">task/AOJ/out.cpp</a>
 
 
 ## Verify Files
 
+* :heavy_check_mark: <a href="verify/ITP_1_1_B.test.cpp.html">ITP_1_1_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/example.test.cpp.html">example.test.cpp</a>
 * :heavy_check_mark: <a href="verify/inversion.test.cpp.html">inversion.test.cpp</a>
+* :x: <a href="verify/task/AOJ/GRL_1_A.test.cpp.html">task/AOJ/GRL_1_A.test.cpp</a>
 
 

@@ -25,25 +25,21 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: template.cpp
+# :warning: ITP_1_1_B.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
-* <a href="{{ site.github.repository_url }}/blob/master/template.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-24 10:46:33+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/ITP_1_1_B.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-08-24 14:25:00+09:00
 
 
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_B">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_B</a>
 
 
-## Required by
+## Depends on
 
-* :warning: <a href="ITP_1_1_B.cpp.html">ITP_1_1_B.cpp</a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../verify/ITP_1_1_B.test.cpp.html">ITP_1_1_B.test.cpp</a>
+* :heavy_check_mark: <a href="template.cpp.html">template.cpp</a>
 
 
 ## Code
@@ -51,18 +47,13 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_B"
+#include "template.cpp"
 
-#include<bits/stdc++.h>
-using namespace std;
-
-#define REP(i,n) for(int i = 0;i < n;i++)
-#define mp make_pair
-#define pb push_back
-#define eb emplace_back
-#define all(x) (x).begin(),(x).end()
-
-template<class T> bool chmax(T& a,T b){ if(a > b){ a = b; return true; }else return false; }
-template<class T> bool chmin(T& a,T b){ if(a < b){ a = b; return true; }else return false; }
+int main(){
+  int x;cin >> x;
+  cout << x * x * x << '\n';
+}
 
 ```
 {% endraw %}
@@ -70,6 +61,8 @@ template<class T> bool chmin(T& a,T b){ if(a < b){ a = b; return true; }else ret
 <a id="bundled"></a>
 {% raw %}
 ```cpp
+#line 1 "ITP_1_1_B.cpp"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_B"
 #line 1 "template.cpp"
 
 #include<bits/stdc++.h>
@@ -83,6 +76,12 @@ using namespace std;
 
 template<class T> bool chmax(T& a,T b){ if(a > b){ a = b; return true; }else return false; }
 template<class T> bool chmin(T& a,T b){ if(a < b){ a = b; return true; }else return false; }
+#line 3 "ITP_1_1_B.cpp"
+
+int main(){
+  int x;cin >> x;
+  cout << x * x * x << '\n';
+}
 
 ```
 {% endraw %}

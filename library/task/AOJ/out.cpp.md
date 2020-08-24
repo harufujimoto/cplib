@@ -25,22 +25,16 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :warning: task/AOJ/GRL_1_A.cpp
+# :warning: task/AOJ/out.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
 * category: <a href="../../../index.html#26ab1ea50519442a89bb60aadb3416a2">task/AOJ</a>
-* <a href="{{ site.github.repository_url }}/blob/master/task/AOJ/GRL_1_A.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-23 17:07:18+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/task/AOJ/out.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-08-24 14:25:00+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A">https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A</a>
-
-
-## Depends on
-
-* :warning: <a href="../../graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
-* :warning: <a href="../../graph/template.cpp.html">graph/template.cpp</a>
 
 
 ## Code
@@ -48,6 +42,7 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
+#line 1 "GRL_1_A.cpp"
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A"
 #include<bits/stdc++.h>
 using namespace std;
@@ -75,8 +70,58 @@ template<class T> ostream &operator << (ostream&, const vector<vector<T> >&);
 template<class S, class T> ostream &operator << (ostream& out, const pair<S, T>& p);
 template<class T> istream &operator >> (istream&, vector<T>&);
 
-#include "../../graph/dijkstra.cpp"
+#line 2 "/home/parallels/kyopro/cplib/graph/dijkstra.cpp"
+using namespace std;
 
+#line 1 "/home/parallels/kyopro/cplib/graph/template.cpp"
+template<class T> struct Edge{
+  int from,to; T cost;
+  Edge(int from,int to,T cost):from(from),to(to),cost(cost){}
+  Edge(){}
+};
+template<class T> struct Graph{
+  int n;
+  vector<vector<Edge<T>>> g;
+  Graph(int n):n(n){
+    g.resize(n);
+  }
+  void add_edge(int from,int to){
+    g[from].emplace_back(from,to,1);
+  }
+  void add_edge(int from,int to,T cost){
+    g[from].emplace_back(from,to,cost);
+  }
+  vector<Edge<T>>& operator[](int i){ return g[i]; }
+};
+#line 5 "/home/parallels/kyopro/cplib/graph/dijkstra.cpp"
+
+template<class T> struct Dijkstra{
+  #define INF (1LL << 55)
+  using P = pair<T,int>;
+  Graph<T> G;
+  vector<T> d;
+  Dijkstra(Graph<T>& G):G(G){}
+  void solve(int s){
+    d.assign(G.n,INF);
+    d[s] = 0;
+    priority_queue<P,vector<P>,greater<P> > que;
+    que.push(P(0,s));
+    while(que.size()){
+      P p = que.top();que.pop();
+      int v = p.second;
+      if(d[v] < p.first) continue;
+      for(int i = 0;i < G[v].size();i++){
+        Edge<T>& e = G[v][i];
+        if(d[e.to] > d[v] + e.cost){
+          d[e.to] = d[v] + e.cost;
+          que.push(P(d[e.to] , e.to));
+        }
+      }
+    }
+  }
+  T& operator[](int i){return d[i];}
+};
+#line 29 "GRL_1_A.cpp"
 int main(void) {
   cin.tie(0);
   ios::sync_with_stdio(false);
@@ -165,7 +210,8 @@ vector<pair<char, int> > runlength(string s) {
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "task/AOJ/GRL_1_A.cpp"
+#line 1 "task/AOJ/out.cpp"
+#line 1 "GRL_1_A.cpp"
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A"
 #include<bits/stdc++.h>
 using namespace std;
@@ -193,10 +239,10 @@ template<class T> ostream &operator << (ostream&, const vector<vector<T> >&);
 template<class S, class T> ostream &operator << (ostream& out, const pair<S, T>& p);
 template<class T> istream &operator >> (istream&, vector<T>&);
 
-#line 2 "graph/dijkstra.cpp"
+#line 2 "/home/parallels/kyopro/cplib/graph/dijkstra.cpp"
 using namespace std;
 
-#line 1 "graph/template.cpp"
+#line 1 "/home/parallels/kyopro/cplib/graph/template.cpp"
 template<class T> struct Edge{
   int from,to; T cost;
   Edge(int from,int to,T cost):from(from),to(to),cost(cost){}
@@ -216,7 +262,7 @@ template<class T> struct Graph{
   }
   vector<Edge<T>>& operator[](int i){ return g[i]; }
 };
-#line 5 "graph/dijkstra.cpp"
+#line 5 "/home/parallels/kyopro/cplib/graph/dijkstra.cpp"
 
 template<class T> struct Dijkstra{
   #define INF (1LL << 55)
@@ -244,8 +290,7 @@ template<class T> struct Dijkstra{
   }
   T& operator[](int i){return d[i];}
 };
-#line 29 "task/AOJ/GRL_1_A.cpp"
-
+#line 29 "GRL_1_A.cpp"
 int main(void) {
   cin.tie(0);
   ios::sync_with_stdio(false);

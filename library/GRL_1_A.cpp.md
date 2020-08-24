@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/GRL_1_A.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-24 18:19:35+09:00
+    - Last commit date: 2020-08-24 19:10:17+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A">https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :warning: <a href="graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
-* :heavy_check_mark: <a href="graph/template.cpp.html">graph/template.cpp</a>
+* :x: <a href="graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
+* :question: <a href="graph/template.cpp.html">graph/template.cpp</a>
 
 
 ## Code
@@ -221,9 +221,11 @@ template<class T> struct Dijkstra{
   using P = pair<T,int>;
   Graph<T> G;
   vector<T> d;
+  vector<int> prev;
   Dijkstra(Graph<T>& G):G(G){}
   void solve(int s){
     d.assign(G.n,INF);
+    prev.assign(G.n,-1);
     d[s] = 0;
     priority_queue<P,vector<P>,greater<P> > que;
     que.push(P(0,s));
@@ -235,10 +237,20 @@ template<class T> struct Dijkstra{
         Edge<T>& e = G[v][i];
         if(d[e.to] > d[v] + e.cost){
           d[e.to] = d[v] + e.cost;
+          prev[e.to] = v;
           que.push(P(d[e.to] , e.to));
         }
       }
     }
+  }
+  bool reachable(int t){
+    return d[t] != INF;
+  }
+  vector<int> get_path(int t){
+    vector<int> path;
+    for(;t != -1;t = prev[t]){ path.push_back(t); }
+    reverse(path.begin(),path.end());
+    return path;
   }
   T& operator[](int i){return d[i];}
 };

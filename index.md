@@ -41,7 +41,7 @@ layout: default
 * :warning: <a href="library/GRL_1_A.cpp.html">GRL_1_A.cpp</a>
 * :warning: <a href="library/ITP_1_1_B.cpp.html">ITP_1_1_B.cpp</a>
 * :warning: <a href="library/macro.cpp.html">macro.cpp</a>
-* :heavy_check_mark: <a href="library/template.cpp.html">template.cpp</a>
+* :question: <a href="library/template.cpp.html">template.cpp</a>
 
 
 <div id="c8f6850ec2ec3fb32f203c1f4e3c2fd2"></div>
@@ -57,9 +57,16 @@ layout: default
 ### graph
 
 * :warning: <a href="library/graph/bellman_ford.cpp.html">graph/bellman_ford.cpp</a>
-* :warning: <a href="library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
+* :x: <a href="library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
 * :heavy_check_mark: <a href="library/graph/lca.cpp.html">graph/lca.cpp</a>
-* :heavy_check_mark: <a href="library/graph/template.cpp.html">graph/template.cpp</a>
+* :question: <a href="library/graph/template.cpp.html">graph/template.cpp</a>
+
+
+<div id="a6a96afc30701de32dfcd524b6a3bd23"></div>
+
+### task/yosupo
+
+* :warning: <a href="library/task/yosupo/out.cpp.html">task/yosupo/out.cpp</a>
 
 
 ## Verify Files
@@ -70,6 +77,7 @@ layout: default
 * :x: <a href="verify/task/AOJ/GRL_1_A.test.cpp.html">task/AOJ/GRL_1_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/task/yosupo/associative_array.test.cpp.html">task/yosupo/associative_array.test.cpp</a>
 * :heavy_check_mark: <a href="verify/task/yosupo/lca.test.cpp.html">task/yosupo/lca.test.cpp</a>
+* :x: <a href="verify/task/yosupo/shortest_path.test.cpp.html">task/yosupo/shortest_path.test.cpp</a>
 * :heavy_check_mark: <a href="verify/task/yosupo/staticrmq.test.cpp.html">task/yosupo/staticrmq.test.cpp</a>
 
 

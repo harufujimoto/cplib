@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: template.cpp
+# :question: template.cpp
 
 <a href="../index.html">Back to top page</a>
 
@@ -46,6 +46,7 @@ layout: default
 * :heavy_check_mark: <a href="../verify/ITP_1_1_B.test.cpp.html">ITP_1_1_B.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/task/yosupo/associative_array.test.cpp.html">task/yosupo/associative_array.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/task/yosupo/lca.test.cpp.html">task/yosupo/lca.test.cpp</a>
+* :x: <a href="../verify/task/yosupo/shortest_path.test.cpp.html">task/yosupo/shortest_path.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/task/yosupo/staticrmq.test.cpp.html">task/yosupo/staticrmq.test.cpp</a>
 
 

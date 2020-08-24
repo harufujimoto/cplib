@@ -1,4 +1,4 @@
-// author : lynmisakura
+
 #include<bits/stdc++.h>
 using namespace std;
 

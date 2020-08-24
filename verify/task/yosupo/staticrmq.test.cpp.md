@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#a6a96afc30701de32dfcd524b6a3bd23">task/yosupo</a>
 * <a href="{{ site.github.repository_url }}/blob/master/task/yosupo/staticrmq.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-24 18:51:19+09:00
+    - Last commit date: 2020-08-25 00:44:09+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/staticrmq">https://judge.yosupo.jp/problem/staticrmq</a>
@@ -86,6 +86,8 @@ using namespace std;
 #define pb push_back
 #define eb emplace_back
 #define all(x) (x).begin(),(x).end()
+
+using ll = long long;
 
 template<class T> bool chmax(T& a,T b){ if(a > b){ a = b; return true; }else return false; }
 template<class T> bool chmin(T& a,T b){ if(a < b){ a = b; return true; }else return false; }

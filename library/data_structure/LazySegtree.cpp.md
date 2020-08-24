@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: data_structure/LazySegtree.cpp
+# :heavy_check_mark: data_structure/LazySegtree.cpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -34,6 +34,11 @@ layout: default
     - Last commit date: 2020-08-25 00:39:20+09:00
 
 
+
+
+## Verified with
+
+* :heavy_check_mark: <a href="../../verify/task/AOJ/DSL_2_G.test.cpp.html">task/AOJ/DSL_2_G.test.cpp</a>
 
 
 ## Code

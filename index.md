@@ -56,22 +56,10 @@ layout: default
 
 ### graph
 
-* :x: <a href="library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
-* :x: <a href="library/graph/template.cpp.html">graph/template.cpp</a>
-
-
-<div id="478f3a4c51824ad23cb50c1c60670c0f"></div>
-
-### task
-
-* :warning: <a href="library/task/AOJ_DSL_2_A.cpp.html">task/AOJ_DSL_2_A.cpp</a>
-
-
-<div id="26ab1ea50519442a89bb60aadb3416a2"></div>
-
-### task/AOJ
-
-* :warning: <a href="library/task/AOJ/out.cpp.html">task/AOJ/out.cpp</a>
+* :warning: <a href="library/graph/bellman_ford.cpp.html">graph/bellman_ford.cpp</a>
+* :warning: <a href="library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
+* :heavy_check_mark: <a href="library/graph/lca.cpp.html">graph/lca.cpp</a>
+* :heavy_check_mark: <a href="library/graph/template.cpp.html">graph/template.cpp</a>
 
 
 ## Verify Files
@@ -80,5 +68,6 @@ layout: default
 * :heavy_check_mark: <a href="verify/example.test.cpp.html">example.test.cpp</a>
 * :heavy_check_mark: <a href="verify/inversion.test.cpp.html">inversion.test.cpp</a>
 * :x: <a href="verify/task/AOJ/GRL_1_A.test.cpp.html">task/AOJ/GRL_1_A.test.cpp</a>
+* :heavy_check_mark: <a href="verify/task/yosupo/lca.test.cpp.html">task/yosupo/lca.test.cpp</a>
 
 

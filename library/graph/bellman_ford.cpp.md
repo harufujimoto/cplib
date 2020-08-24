@@ -25,12 +25,12 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :warning: graph/dijkstra.cpp
+# :warning: graph/bellman_ford.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
-* <a href="{{ site.github.repository_url }}/blob/master/graph/dijkstra.cpp">View this file on GitHub</a>
+* <a href="{{ site.github.repository_url }}/blob/master/graph/bellman_ford.cpp">View this file on GitHub</a>
     - Last commit date: 2020-08-24 18:19:35+09:00
 
 
@@ -41,11 +41,6 @@ layout: default
 * :heavy_check_mark: <a href="template.cpp.html">graph/template.cpp</a>
 
 
-## Required by
-
-* :warning: <a href="../GRL_1_A.cpp.html">GRL_1_A.cpp</a>
-
-
 ## Code
 
 <a id="unbundled"></a>
@@ -53,31 +48,13 @@ layout: default
 ```cpp
 #include "template.cpp"
 
-template<class T> struct Dijkstra{
-  #define INF (1LL << 55)
-  using P = pair<T,int>;
-  Graph<T> G;
+template<class T> BellmanFord{
   vector<T> d;
-  Dijkstra(Graph<T>& G):G(G){}
-  void solve(int s){
+  Graph<T> G;
+  BellmanFord(Graph<T>& G):G(G){
     d.assign(G.n,INF);
-    d[s] = 0;
-    priority_queue<P,vector<P>,greater<P> > que;
-    que.push(P(0,s));
-    while(que.size()){
-      P p = que.top();que.pop();
-      int v = p.second;
-      if(d[v] < p.first) continue;
-      for(int i = 0;i < G[v].size();i++){
-        Edge<T>& e = G[v][i];
-        if(d[e.to] > d[v] + e.cost){
-          d[e.to] = d[v] + e.cost;
-          que.push(P(d[e.to] , e.to));
-        }
-      }
-    }
   }
-  T& operator[](int i){return d[i];}
+  
 };
 
 ```
@@ -106,33 +83,15 @@ template<class T> struct Graph{
   }
   vector<Edge<T>>& operator[](int i){ return g[i]; }
 };
-#line 2 "graph/dijkstra.cpp"
+#line 2 "graph/bellman_ford.cpp"
 
-template<class T> struct Dijkstra{
-  #define INF (1LL << 55)
-  using P = pair<T,int>;
-  Graph<T> G;
+template<class T> BellmanFord{
   vector<T> d;
-  Dijkstra(Graph<T>& G):G(G){}
-  void solve(int s){
+  Graph<T> G;
+  BellmanFord(Graph<T>& G):G(G){
     d.assign(G.n,INF);
-    d[s] = 0;
-    priority_queue<P,vector<P>,greater<P> > que;
-    que.push(P(0,s));
-    while(que.size()){
-      P p = que.top();que.pop();
-      int v = p.second;
-      if(d[v] < p.first) continue;
-      for(int i = 0;i < G[v].size();i++){
-        Edge<T>& e = G[v][i];
-        if(d[e.to] > d[v] + e.cost){
-          d[e.to] = d[v] + e.cost;
-          que.push(P(d[e.to] , e.to));
-        }
-      }
-    }
   }
-  T& operator[](int i){return d[i];}
+  
 };
 
 ```

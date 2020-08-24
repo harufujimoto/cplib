@@ -36,11 +36,6 @@ layout: default
 
 
 
-## Required by
-
-* :warning: <a href="../task/AOJ_DSL_2_A.cpp.html">task/AOJ_DSL_2_A.cpp</a>
-
-
 ## Code
 
 <a id="unbundled"></a>

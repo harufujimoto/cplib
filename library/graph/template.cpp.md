@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: graph/template.cpp
+# :heavy_check_mark: graph/template.cpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -39,12 +39,14 @@ layout: default
 ## Required by
 
 * :warning: <a href="../GRL_1_A.cpp.html">GRL_1_A.cpp</a>
-* :x: <a href="dijkstra.cpp.html">graph/dijkstra.cpp</a>
+* :warning: <a href="bellman_ford.cpp.html">graph/bellman_ford.cpp</a>
+* :warning: <a href="dijkstra.cpp.html">graph/dijkstra.cpp</a>
+* :heavy_check_mark: <a href="lca.cpp.html">graph/lca.cpp</a>
 
 
 ## Verified with
 
-* :x: <a href="../../verify/task/AOJ/GRL_1_A.test.cpp.html">task/AOJ/GRL_1_A.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/task/yosupo/lca.test.cpp.html">task/yosupo/lca.test.cpp</a>
 
 
 ## Code

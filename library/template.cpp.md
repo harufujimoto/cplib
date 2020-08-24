@@ -44,6 +44,7 @@ layout: default
 ## Verified with
 
 * :heavy_check_mark: <a href="../verify/ITP_1_1_B.test.cpp.html">ITP_1_1_B.test.cpp</a>
+* :heavy_check_mark: <a href="../verify/task/yosupo/lca.test.cpp.html">task/yosupo/lca.test.cpp</a>
 
 
 ## Code

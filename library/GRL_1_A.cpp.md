@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/GRL_1_A.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-23 17:07:18+09:00
+    - Last commit date: 2020-08-24 18:19:35+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A">https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A</a>
@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :x: <a href="graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
-* :x: <a href="graph/template.cpp.html">graph/template.cpp</a>
+* :warning: <a href="graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
+* :heavy_check_mark: <a href="graph/template.cpp.html">graph/template.cpp</a>
 
 
 ## Code
@@ -194,9 +194,6 @@ template<class T> ostream &operator << (ostream&, const vector<vector<T> >&);
 template<class S, class T> ostream &operator << (ostream& out, const pair<S, T>& p);
 template<class T> istream &operator >> (istream&, vector<T>&);
 
-#line 2 "graph/dijkstra.cpp"
-using namespace std;
-
 #line 1 "graph/template.cpp"
 template<class T> struct Edge{
   int from,to; T cost;
@@ -217,7 +214,7 @@ template<class T> struct Graph{
   }
   vector<Edge<T>>& operator[](int i){ return g[i]; }
 };
-#line 5 "graph/dijkstra.cpp"
+#line 2 "graph/dijkstra.cpp"
 
 template<class T> struct Dijkstra{
   #define INF (1LL << 55)

@@ -48,6 +48,7 @@ layout: default
 
 ### data_structure
 
+* :warning: <a href="library/data_structure/LazySegtree.cpp.html">data_structure/LazySegtree.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/RangeMinQuery.cpp.html">data_structure/RangeMinQuery.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/fenwick_tree.cpp.html">data_structure/fenwick_tree.cpp</a>
 

@@ -68,6 +68,7 @@ layout: default
 * :heavy_check_mark: <a href="verify/example.test.cpp.html">example.test.cpp</a>
 * :heavy_check_mark: <a href="verify/inversion.test.cpp.html">inversion.test.cpp</a>
 * :x: <a href="verify/task/AOJ/GRL_1_A.test.cpp.html">task/AOJ/GRL_1_A.test.cpp</a>
+* :heavy_check_mark: <a href="verify/task/yosupo/associative_array.test.cpp.html">task/yosupo/associative_array.test.cpp</a>
 * :heavy_check_mark: <a href="verify/task/yosupo/lca.test.cpp.html">task/yosupo/lca.test.cpp</a>
 
 

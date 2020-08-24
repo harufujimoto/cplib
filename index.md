@@ -48,7 +48,7 @@ layout: default
 
 ### data_structure
 
-* :warning: <a href="library/data_structure/RangeMinQuery.cpp.html">data_structure/RangeMinQuery.cpp</a>
+* :heavy_check_mark: <a href="library/data_structure/RangeMinQuery.cpp.html">data_structure/RangeMinQuery.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/fenwick_tree.cpp.html">data_structure/fenwick_tree.cpp</a>
 
 
@@ -70,5 +70,6 @@ layout: default
 * :x: <a href="verify/task/AOJ/GRL_1_A.test.cpp.html">task/AOJ/GRL_1_A.test.cpp</a>
 * :heavy_check_mark: <a href="verify/task/yosupo/associative_array.test.cpp.html">task/yosupo/associative_array.test.cpp</a>
 * :heavy_check_mark: <a href="verify/task/yosupo/lca.test.cpp.html">task/yosupo/lca.test.cpp</a>
+* :heavy_check_mark: <a href="verify/task/yosupo/staticrmq.test.cpp.html">task/yosupo/staticrmq.test.cpp</a>
 
 

@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 #include "template.cpp"
 
 template<class T> struct Dijkstra{

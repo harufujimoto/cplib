@@ -1,3 +1,4 @@
+#line 1 "GRL_1_A.cpp"
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A"
 #include<bits/stdc++.h>
 using namespace std;
@@ -25,7 +26,58 @@ template<class T> ostream &operator << (ostream&, const vector<vector<T> >&);
 template<class S, class T> ostream &operator << (ostream& out, const pair<S, T>& p);
 template<class T> istream &operator >> (istream&, vector<T>&);
 
-#include "../../graph/dijkstra.cpp"
+#line 2 "/home/parallels/kyopro/cplib/graph/dijkstra.cpp"
+using namespace std;
+
+#line 1 "/home/parallels/kyopro/cplib/graph/template.cpp"
+template<class T> struct Edge{
+  int from,to; T cost;
+  Edge(int from,int to,T cost):from(from),to(to),cost(cost){}
+  Edge(){}
+};
+template<class T> struct Graph{
+  int n;
+  vector<vector<Edge<T>>> g;
+  Graph(int n):n(n){
+    g.resize(n);
+  }
+  void add_edge(int from,int to){
+    g[from].emplace_back(from,to,1);
+  }
+  void add_edge(int from,int to,T cost){
+    g[from].emplace_back(from,to,cost);
+  }
+  vector<Edge<T>>& operator[](int i){ return g[i]; }
+};
+#line 5 "/home/parallels/kyopro/cplib/graph/dijkstra.cpp"
+
+template<class T> struct Dijkstra{
+  #define INF (1LL << 55)
+  using P = pair<T,int>;
+  Graph<T> G;
+  vector<T> d;
+  Dijkstra(Graph<T>& G):G(G){}
+  void solve(int s){
+    d.assign(G.n,INF);
+    d[s] = 0;
+    priority_queue<P,vector<P>,greater<P> > que;
+    que.push(P(0,s));
+    while(que.size()){
+      P p = que.top();que.pop();
+      int v = p.second;
+      if(d[v] < p.first) continue;
+      for(int i = 0;i < G[v].size();i++){
+        Edge<T>& e = G[v][i];
+        if(d[e.to] > d[v] + e.cost){
+          d[e.to] = d[v] + e.cost;
+          que.push(P(d[e.to] , e.to));
+        }
+      }
+    }
+  }
+  T& operator[](int i){return d[i];}
+};
+#line 29 "GRL_1_A.cpp"
 
 int main(void) {
   cin.tie(0);
@@ -107,4 +159,5 @@ vector<pair<char, int> > runlength(string s) {
   vector<char> arr(s.size()); for (int i = 0; i < s.size(); i++)arr[i] = s[i];
   return runlength(arr);
 }
+
 

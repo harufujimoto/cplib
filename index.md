@@ -39,6 +39,8 @@ layout: default
 ### .
 
 * :warning: <a href="library/GRL_1_A.cpp.html">GRL_1_A.cpp</a>
+* :warning: <a href="library/macro.cpp.html">macro.cpp</a>
+* :warning: <a href="library/template.cpp.html">template.cpp</a>
 
 
 <div id="c8f6850ec2ec3fb32f203c1f4e3c2fd2"></div>

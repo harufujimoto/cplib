@@ -39,8 +39,8 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
-* :heavy_check_mark: <a href="graph/template.cpp.html">graph/template.cpp</a>
+* :x: <a href="graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
+* :question: <a href="graph/template.cpp.html">graph/template.cpp</a>
 
 
 ## Code

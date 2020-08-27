@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: task/yosupo/shortest_path.test.cpp
+# :x: task/yosupo/shortest_path.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
 * category: <a href="../../../index.html#a6a96afc30701de32dfcd524b6a3bd23">task/yosupo</a>
 * <a href="{{ site.github.repository_url }}/blob/master/task/yosupo/shortest_path.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-25 00:44:09+09:00
+    - Last commit date: 2020-08-24 19:10:17+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/shortest_path">https://judge.yosupo.jp/problem/shortest_path</a>
@@ -39,9 +39,9 @@ layout: default
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
-* :heavy_check_mark: <a href="../../../library/graph/template.cpp.html">graph/template.cpp</a>
-* :heavy_check_mark: <a href="../../../library/template.cpp.html">template.cpp</a>
+* :x: <a href="../../../library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
+* :question: <a href="../../../library/graph/template.cpp.html">graph/template.cpp</a>
+* :question: <a href="../../../library/template.cpp.html">template.cpp</a>
 
 
 ## Code
@@ -96,8 +96,6 @@ using namespace std;
 #define pb push_back
 #define eb emplace_back
 #define all(x) (x).begin(),(x).end()
-
-using ll = long long;
 
 template<class T> bool chmax(T& a,T b){ if(a > b){ a = b; return true; }else return false; }
 template<class T> bool chmin(T& a,T b){ if(a < b){ a = b; return true; }else return false; }

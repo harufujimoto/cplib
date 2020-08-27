@@ -25,13 +25,13 @@ layout: default
 <link rel="stylesheet" href="../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: template.cpp
+# :question: template.cpp
 
 <a href="../index.html">Back to top page</a>
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/template.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-25 00:44:09+09:00
+    - Last commit date: 2020-08-24 10:46:33+09:00
 
 
 
@@ -44,10 +44,9 @@ layout: default
 ## Verified with
 
 * :heavy_check_mark: <a href="../verify/ITP_1_1_B.test.cpp.html">ITP_1_1_B.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/task/AOJ/DSL_2_G.test.cpp.html">task/AOJ/DSL_2_G.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/task/yosupo/associative_array.test.cpp.html">task/yosupo/associative_array.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/task/yosupo/lca.test.cpp.html">task/yosupo/lca.test.cpp</a>
-* :heavy_check_mark: <a href="../verify/task/yosupo/shortest_path.test.cpp.html">task/yosupo/shortest_path.test.cpp</a>
+* :x: <a href="../verify/task/yosupo/shortest_path.test.cpp.html">task/yosupo/shortest_path.test.cpp</a>
 * :heavy_check_mark: <a href="../verify/task/yosupo/staticrmq.test.cpp.html">task/yosupo/staticrmq.test.cpp</a>
 
 
@@ -65,8 +64,6 @@ using namespace std;
 #define pb push_back
 #define eb emplace_back
 #define all(x) (x).begin(),(x).end()
-
-using ll = long long;
 
 template<class T> bool chmax(T& a,T b){ if(a > b){ a = b; return true; }else return false; }
 template<class T> bool chmin(T& a,T b){ if(a < b){ a = b; return true; }else return false; }
@@ -87,8 +84,6 @@ using namespace std;
 #define pb push_back
 #define eb emplace_back
 #define all(x) (x).begin(),(x).end()
-
-using ll = long long;
 
 template<class T> bool chmax(T& a,T b){ if(a > b){ a = b; return true; }else return false; }
 template<class T> bool chmin(T& a,T b){ if(a < b){ a = b; return true; }else return false; }

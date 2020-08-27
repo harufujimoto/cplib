@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :x: graph/dijkstra.cpp
+# :heavy_check_mark: graph/dijkstra.cpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -38,7 +38,7 @@ layout: default
 
 ## Depends on
 
-* :question: <a href="template.cpp.html">graph/template.cpp</a>
+* :heavy_check_mark: <a href="template.cpp.html">graph/template.cpp</a>
 
 
 ## Required by
@@ -48,7 +48,7 @@ layout: default
 
 ## Verified with
 
-* :x: <a href="../../verify/task/yosupo/shortest_path.test.cpp.html">task/yosupo/shortest_path.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/task/yosupo/shortest_path.test.cpp.html">task/yosupo/shortest_path.test.cpp</a>
 
 
 ## Code

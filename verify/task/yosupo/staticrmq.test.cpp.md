@@ -40,7 +40,7 @@ layout: default
 ## Depends on
 
 * :heavy_check_mark: <a href="../../../library/data_structure/RangeMinQuery.cpp.html">data_structure/RangeMinQuery.cpp</a>
-* :question: <a href="../../../library/template.cpp.html">template.cpp</a>
+* :heavy_check_mark: <a href="../../../library/template.cpp.html">template.cpp</a>
 
 
 ## Code

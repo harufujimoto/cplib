@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../index.html#5058f1af8388633f609cadb75a75dc9d">.</a>
 * <a href="{{ site.github.repository_url }}/blob/master/GRL_1_A.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-24 19:10:17+09:00
+    - Last commit date: 2020-08-30 11:19:34+09:00
 
 
 * see: <a href="https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A">https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A</a>
@@ -215,7 +215,6 @@ template<class T> struct Graph{
   vector<Edge<T>>& operator[](int i){ return g[i]; }
 };
 #line 2 "graph/dijkstra.cpp"
-
 template<class T> struct Dijkstra{
   #define INF (1LL << 55)
   using P = pair<T,int>;

@@ -25,33 +25,20 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/template.cpp
+# :warning: graph/GridGraph.cpp
 
 <a href="../../index.html">Back to top page</a>
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
-* <a href="{{ site.github.repository_url }}/blob/master/graph/template.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-23 17:07:18+09:00
+* <a href="{{ site.github.repository_url }}/blob/master/graph/GridGraph.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-08-30 11:19:34+09:00
 
 
 
 
-## Required by
+## Depends on
 
-* :warning: <a href="../GRL_1_A.cpp.html">GRL_1_A.cpp</a>
-* :warning: <a href="GridGraph.cpp.html">graph/GridGraph.cpp</a>
-* :warning: <a href="bellman_ford.cpp.html">graph/bellman_ford.cpp</a>
-* :heavy_check_mark: <a href="dijkstra.cpp.html">graph/dijkstra.cpp</a>
-* :heavy_check_mark: <a href="lca.cpp.html">graph/lca.cpp</a>
-* :warning: <a href="main.cpp.html">graph/main.cpp</a>
-* :warning: <a href="problems/count_connectives.cpp.html">graph/problems/count_connectives.cpp</a>
-* :warning: <a href="topologicalsort.cpp.html">graph/topologicalsort.cpp</a>
-
-
-## Verified with
-
-* :heavy_check_mark: <a href="../../verify/task/yosupo/lca.test.cpp.html">task/yosupo/lca.test.cpp</a>
-* :heavy_check_mark: <a href="../../verify/task/yosupo/shortest_path.test.cpp.html">task/yosupo/shortest_path.test.cpp</a>
+* :heavy_check_mark: <a href="template.cpp.html">graph/template.cpp</a>
 
 
 ## Code
@@ -59,24 +46,26 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-template<class T> struct Edge{
-  int from,to; T cost;
-  Edge(int from,int to,T cost):from(from),to(to),cost(cost){}
-  Edge(){}
-};
-template<class T> struct Graph{
-  int n;
-  vector<vector<Edge<T>>> g;
-  Graph(int n):n(n){
-    g.resize(n);
+#include "template.cpp"
+template<class T>
+struct GridGraph{
+  int H,W;
+  Graph<T> G;
+  GridGraph(int H,int W):H(H),W(W){
+    G = Graph<T>((H+2)*(W+2));
   }
-  void add_edge(int from,int to){
-    g[from].emplace_back(from,to,1);
+  int id(int x,int y){
+    return x + y * W;
   }
-  void add_edge(int from,int to,T cost){
-    g[from].emplace_back(from,to,cost);
+  bool inside(int x,int y){
+    return x >= 0 && x < H && y >= 0 && y < W;
   }
-  vector<Edge<T>>& operator[](int i){ return g[i]; }
+  void connect(int x0,int y0,int x1,int y1,T dist = 1){
+    int from = id(x0,y0);
+    int to = id(x1,y1);
+    G.add_edge(from,to,dist);
+    G.add_edge(to,from,dist);
+  }
 };
 
 ```
@@ -104,6 +93,27 @@ template<class T> struct Graph{
     g[from].emplace_back(from,to,cost);
   }
   vector<Edge<T>>& operator[](int i){ return g[i]; }
+};
+#line 2 "graph/GridGraph.cpp"
+template<class T>
+struct GridGraph{
+  int H,W;
+  Graph<T> G;
+  GridGraph(int H,int W):H(H),W(W){
+    G = Graph<T>((H+2)*(W+2));
+  }
+  int id(int x,int y){
+    return x + y * W;
+  }
+  bool inside(int x,int y){
+    return x >= 0 && x < H && y >= 0 && y < W;
+  }
+  void connect(int x0,int y0,int x1,int y1,T dist = 1){
+    int from = id(x0,y0);
+    int to = id(x1,y1);
+    G.add_edge(from,to,dist);
+    G.add_edge(to,from,dist);
+  }
 };
 
 ```

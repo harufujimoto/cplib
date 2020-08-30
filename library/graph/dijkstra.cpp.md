@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/dijkstra.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-24 19:10:17+09:00
+    - Last commit date: 2020-08-30 11:19:34+09:00
 
 
 
@@ -57,7 +57,6 @@ layout: default
 {% raw %}
 ```cpp
 #include "template.cpp"
-
 template<class T> struct Dijkstra{
   #define INF (1LL << 55)
   using P = pair<T,int>;
@@ -124,7 +123,6 @@ template<class T> struct Graph{
   vector<Edge<T>>& operator[](int i){ return g[i]; }
 };
 #line 2 "graph/dijkstra.cpp"
-
 template<class T> struct Dijkstra{
   #define INF (1LL << 55)
   using P = pair<T,int>;

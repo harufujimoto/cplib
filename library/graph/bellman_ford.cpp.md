@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/bellman_ford.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-24 18:19:35+09:00
+    - Last commit date: 2020-08-30 11:19:34+09:00
 
 
 
@@ -47,14 +47,35 @@ layout: default
 {% raw %}
 ```cpp
 #include "template.cpp"
-
-template<class T> BellmanFord{
+template<class T> struct BellmanFord{
+#define INF 1LL << 55
+  int V;
   vector<T> d;
   Graph<T> G;
   BellmanFord(Graph<T>& G):G(G){
-    d.assign(G.n,INF);
+    d.resize(G.n);
+    V = G.n;
   }
-  
+  bool negative = false;
+  void solve(int s){
+    d.assign(G.n,INF);
+    d[s] = 0;
+    for(int i = 0;i <= V;i++){
+      for(int j = 0;j < G.n;j++){
+        for(int k = 0;k < G[j].size();k++){
+          int u = j;
+          int v = G[j][k].to;
+          if(d[u] != INF && d[v] > d[u] + G[j][k].cost){
+            if(i == V){
+              negative = true;
+              return;
+            }
+            d[v] = d[u] + G[j][k].cost;
+          }
+        }
+      }
+    }
+  }
 };
 
 ```
@@ -84,14 +105,35 @@ template<class T> struct Graph{
   vector<Edge<T>>& operator[](int i){ return g[i]; }
 };
 #line 2 "graph/bellman_ford.cpp"
-
-template<class T> BellmanFord{
+template<class T> struct BellmanFord{
+#define INF 1LL << 55
+  int V;
   vector<T> d;
   Graph<T> G;
   BellmanFord(Graph<T>& G):G(G){
-    d.assign(G.n,INF);
+    d.resize(G.n);
+    V = G.n;
   }
-  
+  bool negative = false;
+  void solve(int s){
+    d.assign(G.n,INF);
+    d[s] = 0;
+    for(int i = 0;i <= V;i++){
+      for(int j = 0;j < G.n;j++){
+        for(int k = 0;k < G[j].size();k++){
+          int u = j;
+          int v = G[j][k].to;
+          if(d[u] != INF && d[v] > d[u] + G[j][k].cost){
+            if(i == V){
+              negative = true;
+              return;
+            }
+            d[v] = d[u] + G[j][k].cost;
+          }
+        }
+      }
+    }
+  }
 };
 
 ```

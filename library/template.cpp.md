@@ -39,6 +39,8 @@ layout: default
 ## Required by
 
 * :warning: <a href="ITP_1_1_B.cpp.html">ITP_1_1_B.cpp</a>
+* :warning: <a href="data_structure/Mo_algorithm.cpp.html">data_structure/Mo_algorithm.cpp</a>
+* :warning: <a href="graph/main.cpp.html">graph/main.cpp</a>
 
 
 ## Verified with

@@ -25,21 +25,21 @@ layout: default
 <link rel="stylesheet" href="../../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: task/yosupo/lca.test.cpp
+# :x: task/AOJ/GRL_1_B.test.cpp
 
 <a href="../../../index.html">Back to top page</a>
 
-* category: <a href="../../../index.html#a6a96afc30701de32dfcd524b6a3bd23">task/yosupo</a>
-* <a href="{{ site.github.repository_url }}/blob/master/task/yosupo/lca.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-24 18:19:35+09:00
+* category: <a href="../../../index.html#26ab1ea50519442a89bb60aadb3416a2">task/AOJ</a>
+* <a href="{{ site.github.repository_url }}/blob/master/task/AOJ/GRL_1_B.test.cpp">View this file on GitHub</a>
+    - Last commit date: 2020-08-30 11:31:14+09:00
 
 
-* see: <a href="https://judge.yosupo.jp/problem/lca">https://judge.yosupo.jp/problem/lca</a>
+* see: <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B&lang=ja">http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B&lang=ja</a>
 
 
 ## Depends on
 
-* :heavy_check_mark: <a href="../../../library/graph/lca.cpp.html">graph/lca.cpp</a>
+* :x: <a href="../../../library/graph/bellman_ford.cpp.html">graph/bellman_ford.cpp</a>
 * :question: <a href="../../../library/graph/template.cpp.html">graph/template.cpp</a>
 * :question: <a href="../../../library/template.cpp.html">template.cpp</a>
 
@@ -49,20 +49,25 @@ layout: default
 <a id="unbundled"></a>
 {% raw %}
 ```cpp
-#define PROBLEM "https://judge.yosupo.jp/problem/lca"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B&lang=ja"
 #include "../../template.cpp"
-#include "../../graph/lca.cpp"
-int main(void){
-  int n,q;cin >> n >> q;
-  Graph<int> g(n);
-  REP(i,n - 1){
-    int p;cin >> p;
-    g.add_edge(p,i+1);
+#include "../../graph/bellman_ford.cpp"
+
+int main(){
+  lyn();
+  int n,m,r;cin >> n >> m >> r;
+  Graph<ll> G(n);
+  REP(i,m){
+    int s,t;cin >> s >> t;
+    ll d;cin >> d;
+    G.add_edge(s,t,d);
   }
-  LCA<int> sol(g,0);
-  REP(_,q){
-    int u,v;cin >> u >> v;
-    cout << sol.lca(u,v) << '\n';
+  BellmanFord<ll> BF(G);
+  BF.solve(r);
+  if(BF.negative){
+    cout << "NEGATIVE CYCLE" << '\n';
+  }else{
+    REP(i,n) cout << (BF.d[i] >= (1e10) ? "INF" : to_string(BF.d[i])) << '\n';
   }
 }
 
@@ -72,8 +77,8 @@ int main(void){
 <a id="bundled"></a>
 {% raw %}
 ```cpp
-#line 1 "task/yosupo/lca.test.cpp"
-#define PROBLEM "https://judge.yosupo.jp/problem/lca"
+#line 1 "task/AOJ/GRL_1_B.test.cpp"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B&lang=ja"
 #line 1 "template.cpp"
 
 #include<bits/stdc++.h>
@@ -107,64 +112,54 @@ template<class T> struct Graph{
   }
   vector<Edge<T>>& operator[](int i){ return g[i]; }
 };
-#line 2 "graph/lca.cpp"
-template<class T> struct LCA{
-#define MAX_LOG_V 50
+#line 2 "graph/bellman_ford.cpp"
+template<class T> struct BellmanFord{
+#define INF 1LL << 55
+  int V;
+  vector<T> d;
   Graph<T> G;
-  int root;
-  vector<vector<int>> parent;
-  vector<int> depth;
-  LCA(Graph<T>& G,int root):G(G){
-    parent.assign(MAX_LOG_V,vector<int>(G.n+1,0));
-    depth.assign(G.n+1,0);
-    // initialize parent[0] and depth
-    dfs(root,-1,0);
-    // initialize parent
-    for(int k = 0;k + 1 < MAX_LOG_V;k++){
-      for(int v = 0;v < G.n;v++){
-        if(parent[k][v] < 0) parent[k+1][v] = -1;
-        else parent[k+1][v] = parent[k][parent[k][v]];
-      }
-    }
+  BellmanFord(Graph<T>& G):G(G){
+    d.resize(G.n);
+    V = G.n;
   }
-  void dfs(int v,int p,int d){
-    parent[0][v] = p;
-    depth[v] = d;
-    for(int i = 0;i < G[v].size();i++){
-      if(G[v][i].to != p) dfs(G[v][i].to , v , d + 1);
-    }
-  }
-  // get lca(u,v)
-  int lca(int u,int v){
-    if(depth[u] > depth[v]) swap(u,v);
-    for(int k = 0;k < MAX_LOG_V;k++){
-      if((depth[v] - depth[u]) >> k & 1){
-       v = parent[k][v];
+  bool negative = false;
+  void solve(int s){
+    d.assign(G.n,INF);
+    d[s] = 0;
+    for(int i = 0;i <= V;i++){
+      for(int j = 0;j < G.n;j++){
+        for(int k = 0;k < G[j].size();k++){
+          int u = j;
+          int v = G[j][k].to;
+          if(d[u] != INF && d[v] > d[u] + G[j][k].cost){
+            if(i == V){
+              negative = true;
+              return;
+            }
+            d[v] = d[u] + G[j][k].cost;
+          }
+        }
       }
     }
-    if(u == v)return u;
-    for(int k = MAX_LOG_V - 1;k >= 0;k--){
-      if(parent[k][u] != parent[k][v]){
-       u = parent[k][u];
-       v = parent[k][v];
-      }
-    }
-    return parent[0][u];
   }
 };
+#line 4 "task/AOJ/GRL_1_B.test.cpp"
 
-#line 4 "task/yosupo/lca.test.cpp"
-int main(void){
-  int n,q;cin >> n >> q;
-  Graph<int> g(n);
-  REP(i,n - 1){
-    int p;cin >> p;
-    g.add_edge(p,i+1);
+int main(){
+  lyn();
+  int n,m,r;cin >> n >> m >> r;
+  Graph<ll> G(n);
+  REP(i,m){
+    int s,t;cin >> s >> t;
+    ll d;cin >> d;
+    G.add_edge(s,t,d);
   }
-  LCA<int> sol(g,0);
-  REP(_,q){
-    int u,v;cin >> u >> v;
-    cout << sol.lca(u,v) << '\n';
+  BellmanFord<ll> BF(G);
+  BF.solve(r);
+  if(BF.negative){
+    cout << "NEGATIVE CYCLE" << '\n';
+  }else{
+    REP(i,n) cout << (BF.d[i] >= (1e10) ? "INF" : to_string(BF.d[i])) << '\n';
   }
 }
 

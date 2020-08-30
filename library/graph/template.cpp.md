@@ -25,7 +25,7 @@ layout: default
 <link rel="stylesheet" href="../../assets/css/copy-button.css" />
 
 
-# :heavy_check_mark: graph/template.cpp
+# :question: graph/template.cpp
 
 <a href="../../index.html">Back to top page</a>
 
@@ -40,16 +40,18 @@ layout: default
 
 * :warning: <a href="../GRL_1_A.cpp.html">GRL_1_A.cpp</a>
 * :warning: <a href="GridGraph.cpp.html">graph/GridGraph.cpp</a>
-* :warning: <a href="bellman_ford.cpp.html">graph/bellman_ford.cpp</a>
+* :x: <a href="bellman_ford.cpp.html">graph/bellman_ford.cpp</a>
 * :heavy_check_mark: <a href="dijkstra.cpp.html">graph/dijkstra.cpp</a>
 * :heavy_check_mark: <a href="lca.cpp.html">graph/lca.cpp</a>
 * :warning: <a href="main.cpp.html">graph/main.cpp</a>
 * :warning: <a href="problems/count_connectives.cpp.html">graph/problems/count_connectives.cpp</a>
-* :warning: <a href="topologicalsort.cpp.html">graph/topologicalsort.cpp</a>
+* :heavy_check_mark: <a href="topologicalsort.cpp.html">graph/topologicalsort.cpp</a>
 
 
 ## Verified with
 
+* :x: <a href="../../verify/task/AOJ/GRL_1_B.test.cpp.html">task/AOJ/GRL_1_B.test.cpp</a>
+* :heavy_check_mark: <a href="../../verify/task/AOJ/GRL_4_B.test.cpp.html">task/AOJ/GRL_4_B.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/task/yosupo/lca.test.cpp.html">task/yosupo/lca.test.cpp</a>
 * :heavy_check_mark: <a href="../../verify/task/yosupo/shortest_path.test.cpp.html">task/yosupo/shortest_path.test.cpp</a>
 

@@ -41,14 +41,14 @@ layout: default
 * :warning: <a href="library/GRL_1_A.cpp.html">GRL_1_A.cpp</a>
 * :warning: <a href="library/ITP_1_1_B.cpp.html">ITP_1_1_B.cpp</a>
 * :warning: <a href="library/macro.cpp.html">macro.cpp</a>
-* :heavy_check_mark: <a href="library/template.cpp.html">template.cpp</a>
+* :question: <a href="library/template.cpp.html">template.cpp</a>
 
 
 <div id="c8f6850ec2ec3fb32f203c1f4e3c2fd2"></div>
 
 ### data_structure
 
-* :warning: <a href="library/data_structure/LazySegtree.cpp.html">data_structure/LazySegtree.cpp</a>
+* :x: <a href="library/data_structure/LazySegtree.cpp.html">data_structure/LazySegtree.cpp</a>
 * :warning: <a href="library/data_structure/Mo_algorithm.cpp.html">data_structure/Mo_algorithm.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/RangeMinQuery.cpp.html">data_structure/RangeMinQuery.cpp</a>
 * :heavy_check_mark: <a href="library/data_structure/fenwick_tree.cpp.html">data_structure/fenwick_tree.cpp</a>
@@ -60,12 +60,12 @@ layout: default
 ### graph
 
 * :warning: <a href="library/graph/GridGraph.cpp.html">graph/GridGraph.cpp</a>
-* :warning: <a href="library/graph/bellman_ford.cpp.html">graph/bellman_ford.cpp</a>
+* :x: <a href="library/graph/bellman_ford.cpp.html">graph/bellman_ford.cpp</a>
 * :heavy_check_mark: <a href="library/graph/dijkstra.cpp.html">graph/dijkstra.cpp</a>
 * :heavy_check_mark: <a href="library/graph/lca.cpp.html">graph/lca.cpp</a>
 * :warning: <a href="library/graph/main.cpp.html">graph/main.cpp</a>
-* :heavy_check_mark: <a href="library/graph/template.cpp.html">graph/template.cpp</a>
-* :warning: <a href="library/graph/topologicalsort.cpp.html">graph/topologicalsort.cpp</a>
+* :question: <a href="library/graph/template.cpp.html">graph/template.cpp</a>
+* :heavy_check_mark: <a href="library/graph/topologicalsort.cpp.html">graph/topologicalsort.cpp</a>
 
 
 <div id="e9972f8ef95f0cca0371213ec9c6bd5f"></div>
@@ -87,7 +87,10 @@ layout: default
 * :heavy_check_mark: <a href="verify/ITP_1_1_B.test.cpp.html">ITP_1_1_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/example.test.cpp.html">example.test.cpp</a>
 * :heavy_check_mark: <a href="verify/inversion.test.cpp.html">inversion.test.cpp</a>
+* :x: <a href="verify/task/AOJ/DSL_2_G.test.cpp.html">task/AOJ/DSL_2_G.test.cpp</a>
 * :heavy_check_mark: <a href="verify/task/AOJ/GRL_1_A.test.cpp.html">task/AOJ/GRL_1_A.test.cpp</a>
+* :x: <a href="verify/task/AOJ/GRL_1_B.test.cpp.html">task/AOJ/GRL_1_B.test.cpp</a>
+* :heavy_check_mark: <a href="verify/task/AOJ/GRL_4_B.test.cpp.html">task/AOJ/GRL_4_B.test.cpp</a>
 * :heavy_check_mark: <a href="verify/task/yosupo/associative_array.test.cpp.html">task/yosupo/associative_array.test.cpp</a>
 * :heavy_check_mark: <a href="verify/task/yosupo/lca.test.cpp.html">task/yosupo/lca.test.cpp</a>
 * :heavy_check_mark: <a href="verify/task/yosupo/shortest_path.test.cpp.html">task/yosupo/shortest_path.test.cpp</a>

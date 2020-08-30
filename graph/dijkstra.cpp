@@ -1,5 +1,4 @@
 #include "template.cpp"
-
 template<class T> struct Dijkstra{
   #define INF (1LL << 55)
   using P = pair<T,int>;

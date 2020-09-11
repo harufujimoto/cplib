@@ -1,6 +1,7 @@
 template<class T> struct Edge{
-  int from,to; T cost;
+  int from,to,id; T cost;
   Edge(int from,int to,T cost):from(from),to(to),cost(cost){}
+  Edge(int from,int to,int id,T cost):from(from),to(to),id(id),cost(cost){}
   Edge(){}
 };
 template<class T> struct Graph{

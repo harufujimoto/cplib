@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../index.html#f8b0b924ebd7046dbfa85a856e4682c8">graph</a>
 * <a href="{{ site.github.repository_url }}/blob/master/graph/template.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-23 17:07:18+09:00
+    - Last commit date: 2020-09-11 16:27:44+09:00
 
 
 
@@ -62,8 +62,9 @@ layout: default
 {% raw %}
 ```cpp
 template<class T> struct Edge{
-  int from,to; T cost;
+  int from,to,id; T cost;
   Edge(int from,int to,T cost):from(from),to(to),cost(cost){}
+  Edge(int from,int to,int id,T cost):from(from),to(to),id(id),cost(cost){}
   Edge(){}
 };
 template<class T> struct Graph{
@@ -89,8 +90,9 @@ template<class T> struct Graph{
 ```cpp
 #line 1 "graph/template.cpp"
 template<class T> struct Edge{
-  int from,to; T cost;
+  int from,to,id; T cost;
   Edge(int from,int to,T cost):from(from),to(to),cost(cost){}
+  Edge(int from,int to,int id,T cost):from(from),to(to),id(id),cost(cost){}
   Edge(){}
 };
 template<class T> struct Graph{

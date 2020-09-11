@@ -31,7 +31,7 @@ layout: default
 
 * category: <a href="../../../index.html#a6a96afc30701de32dfcd524b6a3bd23">task/yosupo</a>
 * <a href="{{ site.github.repository_url }}/blob/master/task/yosupo/lca.test.cpp">View this file on GitHub</a>
-    - Last commit date: 2020-08-24 18:19:35+09:00
+    - Last commit date: 2020-09-11 16:27:44+09:00
 
 
 * see: <a href="https://judge.yosupo.jp/problem/lca">https://judge.yosupo.jp/problem/lca</a>
@@ -89,8 +89,9 @@ template<class T> bool chmax(T& a,T b){ if(a > b){ a = b; return true; }else ret
 template<class T> bool chmin(T& a,T b){ if(a < b){ a = b; return true; }else return false; }
 #line 1 "graph/template.cpp"
 template<class T> struct Edge{
-  int from,to; T cost;
+  int from,to,id; T cost;
   Edge(int from,int to,T cost):from(from),to(to),cost(cost){}
+  Edge(int from,int to,int id,T cost):from(from),to(to),id(id),cost(cost){}
   Edge(){}
 };
 template<class T> struct Graph{

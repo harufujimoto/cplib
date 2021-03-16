@@ -1,3 +1,4 @@
+// 遅延セグメントツリー
 template<class T> struct LazySegtree {
 #define DAT_SIZE 2000000
 #define MIN 0
